@@ -1,0 +1,2 @@
+<span>Разработано компанией </span><a href="http://eka-soft.com/" class="pagebottomtext" target="_blank">eka-soft.com</a>&nbsp;&nbsp;
+|&nbsp;&nbsp;<a class="adm-main-support-link" href="mailto:clients@eka-soft.com">Техподдержка</a>

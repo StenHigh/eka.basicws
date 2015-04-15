@@ -1,0 +1,4 @@
+<?
+$MESS["SITE_TEMPLATE_THEME_NAME"] = "Базовая";
+$MESS["SITE_TEMPLATE_THEME_DESCRIPTION"] = "Базовая тема";
+?>

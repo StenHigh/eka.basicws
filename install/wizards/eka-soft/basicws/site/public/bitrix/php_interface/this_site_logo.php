@@ -1,0 +1,1 @@
+<a style="padding: 25px 18px; display: block;" href = "http://eka-soft.com/" target="_blank"><img src = "<?=SITE_DIR.'/local/templates/svitovit/images/eka-logo.png'?>" alt = "Логотип eka-soft"/></a>
