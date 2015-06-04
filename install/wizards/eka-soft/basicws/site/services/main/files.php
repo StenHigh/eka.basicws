@@ -20,7 +20,7 @@ if (WIZARD_INSTALL_DEMO_DATA)
 
 	WizardServices::PatchHtaccess(WIZARD_SITE_PATH);
 
-	/*CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."_index.php", Array("SITE_DIR" => WIZARD_SITE_DIR));*/
+	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."_index.php", Array("SITE_DIR" => WIZARD_SITE_DIR));
 
 	/*$arUrlRewrite = array();
 	if (file_exists(WIZARD_SITE_ROOT_PATH."/urlrewrite.php"))
