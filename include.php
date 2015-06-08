@@ -1,5 +1,5 @@
 <?
-Class CEkaBasicws 
+Class CEkasoftBasicws
 {
 	function OnBuildGlobalMenu(&$aGlobalMenu, &$aModuleMenu)
 	{

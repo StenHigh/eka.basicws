@@ -8,17 +8,26 @@ if (!defined("WIZARD_SITE_ID"))
 if (!defined("WIZARD_SITE_DIR"))
 	return;
 
-if (WIZARD_INSTALL_DEMO_DATA)
-{
-	CopyDirFiles(
-		WIZARD_ABSOLUTE_PATH."/site/public/".LANGUAGE_ID,
-		WIZARD_SITE_PATH,
-		$rewrite = true,
-		$recursive = true,
-				$delete_after_copy = false
-	);
+$path = str_replace("//", "/", WIZARD_ABSOLUTE_PATH . "/site/public/" . LANGUAGE_ID . "/");
 
-	WizardServices::PatchHtaccess(WIZARD_SITE_PATH);
+$handle = @opendir($path);
+if ($handle) {
+    while ($file = readdir($handle)) {
+        if (in_array($file, array(".", "..")))
+            continue;
+
+        $to = ($file == 'upload' ? $_SERVER['DOCUMENT_ROOT'] . '/upload' : WIZARD_SITE_PATH . "/" . $file);
+
+        CopyDirFiles(
+            $path . $file,
+            $to,
+            $rewrite = true,
+            $recursive = true,
+            $delete_after_copy = false
+        );
+    }
+}
+WizardServices::PatchHtaccess(WIZARD_SITE_PATH);
 
 	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."_index.php", Array("SITE_DIR" => WIZARD_SITE_DIR));
 
@@ -46,5 +55,5 @@ if (WIZARD_INSTALL_DEMO_DATA)
 			CUrlRewriter::Add($arUrl);
 		}
 	}*/
-}
+
 ?>

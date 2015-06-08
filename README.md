@@ -1,3 +1,3 @@
-# eka.basicws
+# Ekasoft.basicws
 bx basic setting 
 need modify

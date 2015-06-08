@@ -1,9 +1,9 @@
 <?
 IncludeModuleLangFile(__FILE__);
-Class eka_basicws extends CModule
+Class Ekasoft_basicws extends CModule
 {
-	const MODULE_ID = 'eka.basicws';
-	var $MODULE_ID = 'eka.basicws';
+	const MODULE_ID = 'ekasoft.basicws';
+	var $MODULE_ID = 'ekasoft.basicws';
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;
@@ -17,22 +17,22 @@ Class eka_basicws extends CModule
 		include(dirname(__FILE__)."/version.php");
 		$this->MODULE_VERSION = $arModuleVersion["VERSION"];
 		$this->MODULE_VERSION_DATE = $arModuleVersion["VERSION_DATE"];
-		$this->MODULE_NAME = GetMessage("eka.basicws_MODULE_NAME");
-		$this->MODULE_DESCRIPTION = GetMessage("eka.basicws_MODULE_DESC");
+		$this->MODULE_NAME = GetMessage("ekasoft.basicws_MODULE_NAME");
+		$this->MODULE_DESCRIPTION = GetMessage("ekasoft.basicws_MODULE_DESC");
 
-		$this->PARTNER_NAME = GetMessage("eka.basicws_PARTNER_NAME");
-		$this->PARTNER_URI = GetMessage("eka.basicws_PARTNER_URI");
+		$this->PARTNER_NAME = GetMessage("ekasoft.basicws_PARTNER_NAME");
+		$this->PARTNER_URI = GetMessage("ekasoft.basicws_PARTNER_URI");
 	}
 
 	function InstallDB($arParams = array())
 	{
-		//RegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CEkaBasicws', 'OnBuildGlobalMenu');
+		//RegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CEkasoftBasicws', 'OnBuildGlobalMenu');
 		return true;
 	}
 
 	function UnInstallDB($arParams = array())
 	{
-		//UnRegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CEkaBasicws', 'OnBuildGlobalMenu');
+		//UnRegisterModuleDependences('main', 'OnBuildGlobalMenu', self::MODULE_ID, 'CEkasoftBasicws', 'OnBuildGlobalMenu');
 		return true;
 	}
 
