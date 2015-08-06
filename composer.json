@@ -2,6 +2,7 @@
   "name": "stenhigh/eka.basicws",
   "type": "bitrix-module-installer",
   "description": "basic web site",
+  "version": "dev-master",
   "minimum-stability": "beta",
   "license": "MIT",
   "authors": [
